@@ -12,6 +12,7 @@ env:
       - ROS_PARALLEL_JOBS=-j4
   matrix:
       - ROS_DISTRO="kinetic" ABICHECK_URL='github:ros-visualization/rviz#kinetic-devel' ABICHECK_MERGE=auto
+        DOCKER_BASE_IMAGE="ros:kinetic-ros-base"
 
 install:
   - git clone --depth=1 https://github.com/ros-industrial/industrial_ci.git .ci_config
